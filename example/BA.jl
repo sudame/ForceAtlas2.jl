@@ -1,5 +1,4 @@
 using Graphs, GraphPlot, ForceAtlas2
-using Cairo # optional 
 
 g = barabasi_albert(100, 3)
 locs_x, locs_y = forceatlas2_layout(g, 1000)
