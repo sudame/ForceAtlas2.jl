@@ -1,9 +1,8 @@
 module ForceAtlas2
 using Graphs
-
 include("./Utils.jl")
-export Node, linear_repulsion!
 
+export forceatlas2, forceatlas2_layout
 
 function init(g::AbstractGraph)
   _nodes = Node[]
@@ -90,5 +89,7 @@ function forceatlas2(
 
   return ([n.x for n in nodes], [n.y for n in nodes])
 end
+
+forceatlas2_layout = forceatlas2
 
 end
