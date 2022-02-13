@@ -105,7 +105,7 @@ function linear_attraction!(n1::Node, n2::Node, e::Real, distributed_attraction:
     factor = -coefficient * e / n1.mass
   end
 
-  n1.dx = xdist * factor
+  n1.dx += xdist * factor
   n1.dy += ydist * factor
   n2.dx -= xdist * factor
   n2.dy -= ydist * factor
